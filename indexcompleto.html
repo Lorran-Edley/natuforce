@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <!-- FONTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  
+  <!-- ANIMAÇÕES -->
+
+  <!-- AOS Animation CDN -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natu Force Club</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+<!-- FONTES -->
+
+.fonte-destaque {
+font-family: 'Great Vibes', cursive;
+}
+
+.bebas-neue-regular {
+font-family: "Bebas Neue", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.fonte-poly {
+font-family: 'Poly', serif;
+}
+
+body {
+ margin: 0;
+ padding: 0;
+ background-color: #000;
+ font-family: 'Poppins', sans-serif;
+ color: white;
+}
+
+.header-content {
+      position: absolute;
+      top: 70%;
+      left: 10%;
+      transform: translateY(-50%);
+      color: #fff;
+      max-width: 500px;
+      text-align: left;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .header-content h1 {
+      font-size: 4rem;
+      font-family: 'Bebas Neue', sans-serif;
+      color: #82da56;
+      margin: 0;
+    }
+
+    .header-content p {
+      font-size: 1.5rem;
+      color: #fff;
+      margin: 20px 0;
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, #82da56, #6eb847);
+      color: #000;
+      padding: 15px 40px;
+      font-size: 1.25rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 25px #82da56;
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(90deg, #6eb847, #82da56);
+      transform: translateY(-5px);
+      box-shadow: 0 0 35px #82da56;
+    }
+
+video {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ z-index: -1;
+}
+
+.bg-overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+ z-index: -1;
+}
+
+.results-gallery {
+ display: flex;
+ gap: 16px;
+ overflow-x: auto;
+ scroll-behavior: smooth;
+ padding: 20px 10px;
+}
+
+.results-gallery img {
+ min-width: 250px;
+ height: 160px;
+ object-fit: cover;
+ border-radius: 16px;
+}
+
+.results-gallery::-webkit-scrollbar {
+ display: none;
+}
+
+section, .flex, .mx-auto, .max-w-5xl, .max-w-6xl, .w-full.max-w-[1043px], .w-full.max-w-[500px], .w-full.max-w-[300px] {
+ margin-bottom: 3rem;
+}
+  </style>
+
+<header class="relative h-screen w-full overflow-hidden">
+ <!-- Vídeo de fundo puxado pra direita e menor -->
+<video autoplay muted loop playsinline
+class="absolute top-1/2 left-1/2 w-[60%] h-[100%] object-cover brightness-75 transform -translate-x-[5%] -translate-y-[50%] z-0">
+  <source src="video-topo.mp4" type="video/mp4" />
+  Seu navegador não suporta vídeos HTML5.
+</video>
+
+<!-- Camada escura total -->
+<div class="absolute inset-0 left-0 bg-black/50 z-0"></div>
+
+<!-- Camada gradiente no lado esquerdo -->
+<div class="absolute inset-y-0 left-[9%] w-[80%] bg-gradient-to-r from-black via-black/100 to-transparent z-10"></div>
+
+  
+  <!-- CSS personalizado da animação -->
+  <style>
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  
+    .animate-marquee {
+      display: inline-block;
+      animation: marquee 10s linear infinite;
+    }
+  </style>  
+    
+  
+    <div class="absolute z-10 top-1/2 left-20 transform -translate-y-1/2 text-left text-white max-w-xl">
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-wide">
+        <span class="text-green-600">NATU</span><br />
+        <span class="text-white">FORCE CLUB</span>
+      </h1>
+      <p class="text-white text-lg md:text-xl font-light leading-relaxed max-w-xl mt-6 tracking-wide">
+        Com instruções <span class="text-green-400 font-semibold">práticas</span>, treinos <span class="text-green-400 font-semibold">precisos</span> e segredos para resultados <span class="text-green-400 font-semibold">impressionantes</span>, este app te leva ao seu <span class="text-green-400 font-semibold">objetivo</span>, não importa qual seja.
+      </p>      
+      <a href="#planos"
+        class="mt-6 inline-block border border-white text-white px-6 py-3 text-sm tracking-wide hover:bg-white hover:text-green transition rounded">
+        COMEÇAR AGORA
+      </a>
+    </div>
+  
+  </header>
+  
+  <!-- Hero Section -->
+<section class="mt-40 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-left">
+  <!-- Texto à esquerda -->
+  <div class="md:w-1/2 text-center md:text-left px-4 md:px-0 font-sans">
+    <h2 class="text-5xl md:text-6xl font-extrabold text-white leading-tight tracking-tight font-['Dancing_Script',cursive]">
+      Treino Natural<br class="hidden md:block"> Resultado Real
+    </h2>
+  
+    <h3 class="mt-2 text-lg md:text-xl text-green-400 font-semibold uppercase tracking-widest font-[Inter, sans-serif]">
+      Prático • Intenso • Eficaz
+    </h3>
+  
+    <p class="mt-6 text-base md:text-lg text-gray-300 leading-relaxed max-w-lg font-[Inter, sans-serif]">
+      No <span class="text-white font-bold">Natu Force Club</span>, você tem acesso a treinos inteligentes, instruções diretas e estratégias reais para transformar seu corpo. Nada de promessas vazias — só o que funciona.
+    </p>
+  
+    <p class="mt-4 text-base md:text-lg text-gray-300 leading-relaxed max-w-lg font-[Inter, sans-serif]">
+      Seja você iniciante ou avançado, nosso foco é se adapta ao seu ritmo e entrega resultados consistentes, sem atalhos.
+    </p>
+  
+    <a href="#planos" class="mt-8 inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-full transition-all duration-300 shadow-lg font-semibold text-lg font-[Inter, sans-serif] tracking-wide">
+      Comece Agora
+    </a>
+  </div>
+
+  <!-- Imagem à direita -->
+  <div class="md:w-1/2 relative md:translate-x-40">
+    <img src="Story_do_Instagram_Foco_Força_e_Suor_Fitness_Preto-removebg-preview.png" alt="Treino intenso" class="w-[100%] md:w-[90%] h-auto rounded-lg shadow-lg" />
+  </div>
+</section>
+
+  
+<!-- Beneficios -->
+  <section class="bg-black text-white py-20 px-6 md:px-12">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Imagem -->
+      <img src="como-vamos-ajudar.png" alt="Plano de treino" class="rounded-2xl shadow-xl w-[80%] h-[90%] object-cover mt-64 mb-10" />
+  
+      <!-- Texto descritivo -->
+      <p class="text-xl md:text-2xl font-light mb-8">
+        Através de um plano de treino completo, com orientações claras sobre quais exercícios fazer, quantas séries e repetições executar.
+      </p>
+  
+      <!-- Lista de benefícios -->
+      <div class="text-left space-y-4">
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-2xl">✔️</span>
+          <p>Estratégia de treino renovada todo mês</p>
+        </div>
+  
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-2xl">✔️</span>
+          <p>Adaptado para todos os níveis: do iniciante ao avançado</p>
+        </div>
+  
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-2xl">✔️</span>
+          <p>Protocolos para Hipertrofia natural ou Emagrecimento com eficiência</p>
+        </div>
+  
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-2xl">✔️</span>
+          <p>Planilha de registro de carga pra acompanhar sua evolução</p>
+        </div>
+  
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-2xl">✔️</span>
+          <p>Suporte direto no WhatsApp pra tirar dúvidas sempre que precisar</p>
+        </div>
+  
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-2xl">✔️</span>
+          <p>Acesso a uma biblioteca com +200 exercícios explicados</p>
+        </div>
+  
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-2xl">✔️</span>
+          <p>Grupos de desafios mensais com premiações pra manter a motivação</p>
+        </div>
+  
+        <div class="flex items-start space-x-3">
+          <span class="text-green-500 text-2xl">✔️</span>
+          <p>Conteúdo organizado de forma simples e prática</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+<!-- Seção "Quem somos" (Bio curta) -->
+<section class="py-20 px-8 text-center bg-black text-white">
+  <h2 class="text-5xl font-semibold mb-12 font-extrabold text-white leading-tight tracking-tight font-['Dancing_Script',cursive]">Quem Somos!</h2>
+  <p class="text-lg md:text-3xl text-gray-300 max-w-4xl mx-auto font-bebas">
+    O Natu Force Club vai além de uma plataforma de treino; somos uma comunidade de pessoas com o mesmo propósito: alcançar objetivos através de treinos naturais e inteligentes. Acreditamos que cada treino é uma oportunidade de transformação, levando você cada vez mais perto do corpo dos seus sonhos, com resultados reais e sustentáveis, sem atalhos.
+  </p>
+</section>
+
+  <!-- Resultados de alunos -->
+  <section id="testimonials" class="mt-24 px-6 max-w-6xl mx-auto text-center">
+    <h2 class="fonte-destaque text-4xl text-green-400">Seja você iniciante, intermediário ou avançado!</h2>
+    <div class="results-gallery mt-6">
+      <div class="carrossel">
+        <img src="frame-10.png" alt="Resultado 1" />
+        <img src="frame-20.png" alt="Resultado 2" />
+        <img src="frame-30.png" alt="Resultado 3" />
+        <img src="frame-40.png" alt="Resultado 4" />
+        <img src="frame-50.png" alt="Resultado 5" />
+        <img src="frame-60.png" alt="Resultado 6" />
+        <!-- Duplicando as imagens para criar loop infinito -->
+        <img src="frame-10.png" alt="Resultado 1" />
+        <img src="frame-20.png" alt="Resultado 2" />
+        <img src="frame-30.png" alt="Resultado 3" />
+        <img src="frame-40.png" alt="Resultado 4" />
+        <img src="frame-50.png" alt="Resultado 5" />
+        <img src="frame-60.png" alt="Resultado 6" />
+      </div>
+    </div>
+  </section>
+  
+  <!-- Estilos CSS -->
+  <style>
+    .results-gallery {
+      overflow: hidden;
+      width: 100%;
+    }
+  
+    .carrossel {
+      display: flex;
+      width: calc(100% * 2); /* O tamanho do carrossel será o dobro para o loop */
+      animation: slide 15s linear infinite;
+    }
+  
+    .carrossel img {
+      width: auto;
+      height: 160px; /* Altura fixa */
+      margin-right: 16px; /* Espaço entre as imagens */
+      object-fit: cover; /* Garante que as imagens não distorçam */
+      flex-shrink: 0; /* Impede que as imagens encolham */
+    }
+  
+    /* Animação para o loop infinito */
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%); /* Mover para a esquerda até o final da sequência */
+      }
+    }
+  </style>
+  
+   <!-- CTA 2 -->
+<div class="bg-[#000000] rounded-[60px] border-solid border-[#82da56] border-2 w-[500px] mx-auto relative overflow-hidden flex flex-col items-center py-10 mt-20 mb-20">
+
+    <!-- IMAGEM -->
+    <img
+      class="rounded-[60px] w-full h-auto object-cover mb-6"
+      src="OFERTA-2.png"
+      alt="Imagem Oferta"
+    /></div>
+    
+  <!-- BLOCO DO VÍDEO + TEXTO -->
+<div class="w-full max-w-[500px] mx-auto mb-10 flex flex-col items-center">
+
+    <!-- VÍDEO (centralizado e responsivo) -->
+    <div class="relative w-full aspect-video rounded-[30px] overflow-hidden shadow-lg mb-6">
+      <video class="w-full h-full object-cover" autoplay muted loop playsinline>
+        <source src="prova-social.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+  
+    <!-- TEXTO DE ASSINATURA -->
+    <div class="text-white text-center text-[24px] font-bold mb-4">
+      <span class="fonte-poly">Assine hoje</span> <span class="text-[#82da56]">por somente R$19,99/mês</span>
+    </div>
+  
+  </div>  
+  
+    <!-- BOTÃO CTA -->
+<div class="w-full max-w-[300px] bg-green-600 rounded-[60px] py-3 px-6 mt-6 cursor-pointer hover:scale-105 transition text-center mx-auto">
+    <div class="text-black text-[20px] font-bold">
+      QUERO COMPRAR
+    </div>
+  </div>
+  
+  </div>
+  
+<!-- Feedbacks -->
+<section id="feedbacks" class="mt-32 px-6 max-w-5xl mx-auto text-center">
+  <h2 class="text-3xl font-bold text-green-400">O que nossos alunos estão dizendo</h2>
+  <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Feedback 1 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+      <p class="text-lg text-gray-300 mb-4">"Eu estava lutando para ganhar massa muscular, mas o Natu Force Club fez toda a diferença! Acompanhei os treinos de perto e vi resultados incríveis em poucas semanas."</p>
+      <p class="font-bold text-green-400">Carlos Silva</p>
+      <p class="text-gray-500">Aluno desde 2024</p>
+    </div>
+
+    <!-- Feedback 2 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+      <p class="text-lg text-gray-300 mb-4">"O programa é super acessível e os treinos são fáceis de seguir. Comecei a ver resultados muito rápido, o que me motivou ainda mais a continuar."</p>
+      <p class="font-bold text-green-400">Ana Costa</p>
+      <p class="text-gray-500">Aluno desde 2023</p>
+    </div>
+
+    <!-- Feedback 3 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+      <p class="text-lg text-gray-300 mb-4">"Nunca achei que pudesse alcançar esse nível de resultado sem recorrer a anabolizantes. O Natu Force Club me mostrou que é possível!"</p>
+      <p class="font-bold text-green-400">João Pereira</p>
+      <p class="text-gray-500">Aluno desde 2024</p>
+    </div>
+
+    <!-- Feedback 4 -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+      <p class="text-lg text-gray-300 mb-4">"Os treinos são muito bem estruturados e motivadores. Nunca me senti tão preparado para atingir meus objetivos!"</p>
+      <p class="font-bold text-green-400">Luana Rocha</p>
+      <p class="text-gray-500">Aluno desde 2023</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Dúvidas Frequentes -->
+  <section id="faq" class="mt-32 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-green-400 mb-10">Dúvidas Frequentes</h2>
+    <div class="space-y-4">
+      <div class="border border-gray-600 rounded-lg">
+        <button onclick="toggleAnswer(0)" class="w-full text-left px-4 py-3 font-semibold text-white flex justify-between items-center">
+          O programa é para iniciantes?
+          <span class="text-green-400">+</span>
+        </button>
+        <div class="answer px-4 pb-4 text-gray-300 hidden">
+          Sim! O plano foi pensado para todos os níveis: iniciante, intermediário e avançado.
+        </div>
+      </div>
+
+      <div class="border border-gray-600 rounded-lg">
+        <button onclick="toggleAnswer(1)" class="w-full text-left px-4 py-3 font-semibold text-white flex justify-between items-center">
+          Posso treinar em casa?
+          <span class="text-green-400">+</span>
+        </button>
+        <div class="answer px-4 pb-4 text-gray-300 hidden">
+          Sim! Você terá orientações para treinar tanto em casa quanto na academia.
+        </div>
+      </div>
+
+      <div class="border border-gray-600 rounded-lg">
+        <button onclick="toggleAnswer(2)" class="w-full text-left px-4 py-3 font-semibold text-white flex justify-between items-center">
+          Quanto tempo leva para ter resultados?
+          <span class="text-green-400">+</span>
+        </button>
+        <div class="answer px-4 pb-4 text-gray-300 hidden">
+          Com consistência, nossos alunos veem mudanças visíveis nas primeiras 2 a 4 semanas!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="cta" class="mt-32 px-6 max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-green-400">Assine Agora!</h2>
+    <p class="text-lg mt-4">Garanta acesso ao plano mais completo de treinos e transforme seu físico de forma natural e eficaz.</p>
+    <a href="#cta" class="inline-block mt-6 px-8 py-3 text-black bg-green-400 font-bold rounded-full hover:bg-green-500 transition transform hover:scale-105">
+        Comece Agora
+     </a>    
+  </section>
+
+  <!-- RODAPÉ -->
+
+  <!-- Rodapé fixo com botão CTA -->
+<footer>
+  <!-- Texto com movimento -->
+<div class="fixed bottom-0 left-0 w-full bg-green-400 text-black py-2 z-[50] pointer-events-none">
+  <div class="overflow-hidden">
+    <p class="text-center text-lg font-bold whitespace-nowrap animate-marquee">
+      Oferta limitada! Não perca a chance de começar agora com desconto exclusivo!
+    </p>
+  </div>
+</div>
+</footer>
+
+  <footer class="mb-10 mt-40 py-10 text-center text-gray-500 text-sm bg-black/40">
+    © 2025 Natu Force Club — Todos os direitos reservados.
+  </footer>
+
+  <!-- JavaScript para FAQ -->
+  <script>
+    function toggleAnswer(index) {
+      const answers = document.querySelectorAll('.answer');
+      answers.forEach((ans, i) => {
+        if (i === index) {
+          ans.classList.toggle('hidden');
+        } else {
+          ans.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
